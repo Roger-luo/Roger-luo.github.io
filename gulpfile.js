@@ -63,7 +63,7 @@ gulp.task('fonts', function() {
 gulp.task('imagemin', function() {
 	return gulp.src('src/img/**/*.{jpg,png,gif}')
 		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+		.pipe(imagemin())
 		.pipe(gulp.dest('assets/img/'));
 });
 

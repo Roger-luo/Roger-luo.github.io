@@ -5,14 +5,16 @@
         <span class="site-description">{{site.user_title}}</span>
       </h1>
       <div class="header-icons">
-        <a aria-label="Send email" href="#"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="My Twitter" target="_blank" href="#"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
-        <a aria-label="My Google Plus" target="_blank" href="#"><i class="icon fa fa-google-plus" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="#"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        <a aria-label="Send email" href="mailto:{{ site.email }}"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="My Twitter" href="https://twitter.com/{{ site.twitter_username }}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+        <a aria-label="My Wechat" href=""><i class="icon fa fa-weixin" aria-hidden="true" onclick="alert('My wechat is: Roger-Godfrey')"></i></a>
+        <a aria-label="My Github" href="https://github.com/{{ site.github_username }}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#projects" data-scroll>Projects</a>
+        <a class="link" href="http://104.224.129.42/blog">Blog</a>
+        <a class="link" href="http://104.224.129.42/slides">Slides</a>
+        <a class="link" href="https://github.com/QuantumBFS">QuantumBFS</a>
       </div>
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
