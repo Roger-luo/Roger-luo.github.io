@@ -1,12 +1,12 @@
 # Site settings
 title: Roger Luo
-description: Research Assistant@IOP, CAS
+description: Research Assistant@UWaterloo
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Roger Luo
-user_title: Research Assistant, IOP, CAS
+user_title: Research Assistant, UWaterloo
 email: hiroger@qq.com
 twitter_username: rogerluorl18
 github_username:  Roger-luo
