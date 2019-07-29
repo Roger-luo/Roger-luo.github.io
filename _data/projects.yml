@@ -1,0 +1,9 @@
+# # Project template
+# - layout: top-middle
+#   name: <a href="https://github.com/QuantumBFS/Yao.jl">Yao.jl</a>
+#   # link: https://github.com/QuantumBFS/Yao.jl
+#   # github: https://github.com/QuantumBFS/Yao.jl
+#   quote: >
+#     Extensible, Efficient Quantum Algorithm Design for Humans.
+#   description: | # this will include new lines to allow paragraphs
+#     Description about the work on/with the project

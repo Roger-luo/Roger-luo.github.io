@@ -1,0 +1,20 @@
+# Education Template
+- layout: top-middle
+  name: University of Waterloo, Perimeter Institute
+  dates: 2019 - present
+  qualification: Master of Physics, Quantum Information
+  # quote: >
+  #   The University of Science and Technology of China (USTC) is a national research university in
+  #   Hefei, Anhui, China, under the direct leadership of the Chinese Academy of Sciences (CAS).
+
+
+- layout: top-middle
+  name: University of Science and Technology of China
+  dates: 2013-2017
+  qualification: Bachelor of Science, Physics
+    Minor of Science, Computer Science
+  # quote: >
+  #   The University of Science and Technology of China (USTC) is a national research university in
+  #   Hefei, Anhui, China, under the direct leadership of the Chinese Academy of Sciences (CAS).
+  # description: | # this will include new lines to allow paragraphs
+  #   <mark>THESIS</mark> Deep Learning Method for Quantum Many-body Problem
