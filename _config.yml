@@ -27,14 +27,14 @@ zhihu_username: luo-xiu-zhe
 about_title: I AM
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-      <strong>a graduate student</strong> in Quantum Information at University of Waterloo. I'm interested in
+      <strong>Graduate student</strong> in Quantum Information at University of Waterloo. I'm interested in
       exploring <strong>quantum many body physics</strong> with machine learning and modern methods of programming.
 
-      <strong>open source developer</strong> I am one of the creaters of <a href="https://github.com/QuantumBFS/Yao.jl">QuantumBFS/Yao.jl</a>.
+      <strong>Open source developer</strong> I am one of the creaters of <a href="https://github.com/QuantumBFS/Yao.jl">QuantumBFS/Yao.jl</a>.
       I have been contributing to various project on GitHub, including <a href="https://github.com/FluxML/Zygote.jl">FluxML/Zygote.jl</a>,
       <a href="https://github.com/FluxML/Flux.jl">FluxML/Flux.jl</a>, <a href="https://github.com/pytorch/pytorch">PyTorch</a>.
 
-      <strong>core member of JuliaCN</strong>, the Julia language localization organization. I have been help propagating Julia language
+      <strong>Core member of JuliaCN</strong>, the Julia language localization organization. I have been help propagating Julia language
       in China since 2015 by giving talks, tutorials etc. A lot Chinese people start learning Julia with my tutorial and videos.
 
 # project_title: QuantumBFS/Yao
