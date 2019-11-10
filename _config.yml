@@ -34,8 +34,8 @@ about_content: | # this will include new lines to allow paragraphs
       I have been contributing to various project on GitHub, including <a href="https://github.com/FluxML/Zygote.jl">FluxML/Zygote.jl</a>,
       <a href="https://github.com/FluxML/Flux.jl">FluxML/Flux.jl</a>, <a href="https://github.com/pytorch/pytorch">PyTorch</a>.
 
-      <strong>Core member of JuliaCN</strong>, the Julia language localization organization. I have been help propagating Julia language
-      in China since 2015 by giving talks, tutorials etc. A lot Chinese people start learning Julia with my tutorial and videos.
+      <strong>Core member of JuliaCN</strong>, the Julia language localization organization. I have been helping propagating Julia language
+      in China since 2015 by giving talks, tutorials etc. A lot people in China start learning Julia with my tutorial and videos.
 
 # project_title: QuantumBFS/Yao
 
