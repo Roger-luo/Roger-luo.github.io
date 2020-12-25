@@ -1,0 +1,124 @@
+.page {
+    background-color: #121212;
+}
+
+.header {
+    color: #bfbfbf;
+}
+
+.name {
+    color: #d9d9d9;
+    font-size: 2em;
+    font-family: Roboto, sans-serif;
+}
+
+.name-annotation {
+    color: #b3b3b3;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.contact {
+    text-align: right;
+}
+
+.link{
+    color: #bfbfbf;
+    display: block;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #808080;
+}
+
+.media li {
+    display: inline-block;
+    font-size: 2.4em;
+}
+
+.button {
+    color: #bfbfbf;
+    float: right;
+    display: block;
+    border: none;
+    position: relative;
+    margin: 0.3em;
+}
+
+.button:hover {
+    color: #808080;
+}
+
+.intro-container {
+    color: #bfbfbf;
+    margin: 4em;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0em;
+    margin-left: 3em;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat, no-repeat;
+}
+
+.content-container {
+    margin-top: 3em;
+}
+
+.content-container h1{
+    color: #bfbfbf;
+    font-size: 2em;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 0.3em;
+    border-bottom: 2px dashed;
+}
+
+.institution {
+    color: #bfbfbf;
+    text-align: center;
+    margin-top: 1em;
+    border-bottom: none;
+}
+
+.institution-name{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.institution-program {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.institution-period {
+    font-size: 1em;
+    font-weight: 200;   
+}
+
+.footer-container {
+    margin-top: 4em;
+    margin-bottom: 2em;
+    font-size: 1em;
+    text-align: center;
+    color: #bfbfbf;
+}
+
+.footer-container a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #808080;
+}
