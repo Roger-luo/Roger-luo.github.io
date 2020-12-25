@@ -130,5 +130,28 @@
         <div class="container footer-container">
             罗秀哲 Xiu-Zhe(Roger) Luo - <a href="mailto:rogerluo.rl18@gmail.com" target="_blank">rogerluo.rl18@gmail.com</a> &nbsp;- References on request
         </div>
+
+        <script>
+            const htmlEl = document.getElementsByTagName('html')[0];
+            function toggle_theme(theme) {
+                htmlEl.dataset.theme = theme;
+            }
+
+            function is_night() {
+                var today = new Date();
+                var hour = today.getHours();
+
+                if (hour > 18 && hour < 7) {
+                    return true;
+                }
+                return false
+            }
+
+            if (is_night()) {
+                toggle_theme('dark');
+            } else {
+                toggle_theme('light');
+            }
+        </script>
     </body>
 </html>

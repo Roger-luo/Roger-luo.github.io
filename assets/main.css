@@ -1,9 +1,31 @@
+:root {
+    --background-primary: #121212;
+    --color-primary: #bfbfbf;
+    --color-strong: #d9d9d9;
+    --color-annotation: #b3b3b3;
+    --color-hover: #808080;
+}
+
+html {
+    transition: color 300ms, background-color 300ms;
+    background: var(--background-primary);
+    color: var(--color-primary);
+}
+
+html[data-theme='light'] {
+    --background-primary: #ffffff;
+    --color-primary: #000000;
+    --color-strong: #000000;
+    --color-annotation: #696666;
+    --color-hover: #8c8c8c;
+}
+
 .page {
-    background-color: #121212;
+    background-color: var(--background-primary);
 }
 
 .header {
-    color: #bfbfbf;
+    color: var(--color-primary);
 }
 
 .name {
@@ -11,13 +33,13 @@
 }
 
 .name-main {
-    color: #d9d9d9;
+    color: var(--color-strong);
     font-size: 2em;
     font-family: Roboto, sans-serif;
 }
 
 .name-annotation {
-    color: #b3b3b3;
+    color: var(--color-annotation);
     font-size: 1.3em;
     font-weight: 300;
 }
@@ -27,7 +49,7 @@
 }
 
 .link{
-    color: #bfbfbf;
+    color: var(--color-primary);
     display: block;
     border: none;
     font-size: 1.1em;
@@ -36,7 +58,7 @@
 }
 
 .link:hover {
-    color: #808080;
+    color: var(--color-hover);
 }
 
 .media li {
@@ -45,7 +67,7 @@
 }
 
 .button {
-    color: #bfbfbf;
+    color: var(--color-primary);
     float: right;
     display: block;
     border: none;
@@ -54,11 +76,11 @@
 }
 
 .button:hover {
-    color: #808080;
+    color: var(--color-hover);
 }
 
 .intro-container {
-    color: #bfbfbf;
+    color: var(--color-primary);
     margin-top: 4em;
 }
 
@@ -84,16 +106,16 @@
 }
 
 .content-container h1{
-    color: #bfbfbf;
+    color: var(--color-annotation);
     font-size: 2em;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     padding-bottom: 0.3em;
     border-bottom: 2px dashed;
 }
 
 .institution {
-    color: #bfbfbf;
+    color: var(--color-primary);
     text-align: center;
     margin-top: 1em;
     border-bottom: none;
@@ -119,16 +141,16 @@
     margin-bottom: 2em;
     font-size: 1em;
     text-align: center;
-    color: #bfbfbf;
+    color: var(--color-primary);
 }
 
 .footer-container a {
-    color: #b3b3b3;
+    color: var(--color-annotation);
     text-decoration: none;
 }
 
 .footer-container a:hover {
-    color: #808080;
+    color: var(--color-hover);
 }
 
 @media only screen and (max-width: 400px) {
