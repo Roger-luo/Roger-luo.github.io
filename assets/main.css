@@ -7,6 +7,10 @@
 }
 
 .name {
+    margin-top: 1em;
+}
+
+.name-main {
     color: #d9d9d9;
     font-size: 2em;
     font-family: Roboto, sans-serif;
@@ -55,15 +59,19 @@
 
 .intro-container {
     color: #bfbfbf;
-    margin: 4em;
+    margin-top: 4em;
 }
+
+/* .profile {
+    margin-left: 2em;
+} */
 
 .profile-img {
     width: 200px;
     height: 200px;
     display: block;
     margin: 0em;
-    margin-left: 3em;
+    margin-left: 4em;
     margin-bottom: 20px;
     border-radius: 100px;
     background-position: center;
@@ -121,4 +129,52 @@
 
 .footer-container a:hover {
     color: #808080;
+}
+
+@media only screen and (max-width: 400px) {
+    .name {
+        text-align: center;
+        margin-left: 0.5em;
+    }
+    
+    .name-main {
+        font-size: 1.5em;
+    }
+
+    .name-annotation {
+        font-size: 0.9em;
+    }
+
+    .media li {
+        font-size: 1.2em;
+    }
+
+    .link{
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    .hide-small-screen {
+        display: none;
+    }
+
+    .contact {
+        margin-top: 0.5em;
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-left: 5em;
+    }
+
+    .intro {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .hide-large-screen {
+        display: none;
+    }
 }
