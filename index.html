@@ -141,7 +141,7 @@
                 var today = new Date();
                 var hour = today.getHours();
 
-                if (hour > 18 && hour < 7) {
+                if (hour > 18 || hour < 7) {
                     return true;
                 }
                 return false
