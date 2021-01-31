@@ -84,6 +84,16 @@ html[data-theme='light'] {
     margin-top: 4em;
 }
 
+.intro a {
+    color: var(--color-annotation);
+    border: none;
+    text-decoration: none;
+}
+
+.intro a:hover {
+    color: var(--color-hover);
+}
+
 /* .profile {
     margin-left: 2em;
 } */
