@@ -2,9 +2,12 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import remarkToc from "remark-toc";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +22,8 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       remarkToc,
+      remarkMath,
+      remarkReadingTime,
       [
         remarkCollapse,
         {
@@ -26,6 +31,7 @@ export default defineConfig({
         },
       ],
     ],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
