@@ -1,0 +1,28 @@
+---
+export interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+<span
+  class="profile-img flex-none self-center"
+  style=`background-image: url(${ path })`
+>
+</span>
+
+<style>
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 1.5em;
+    /* margin-left: 4em; */
+    /* margin-bottom: 20px; */
+    border-radius: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat, no-repeat;
+  }
+</style>

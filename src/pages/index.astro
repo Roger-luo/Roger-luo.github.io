@@ -8,6 +8,7 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import Profile from "@components/Profile.astro";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
@@ -23,93 +24,134 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>About</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-        <span class="sr-only">RSS Feed</span>
-      </a>
+      <div class="flex flex-col md:flex-row">
+        <!-- <div class="grid justify-items-center md:justify-items-start"></div> -->
+        <Profile path="/me.png" />
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+        <div>
+          <p>Physicist in the day, developer at night.</p>
+
+          {
+            // only display if at least one social link is enabled
+            socialCount > 0 && (
+              <div class="social-wrapper justify-self-auto">
+                <div class="social-links">Social Links:</div>
+                <Socials />
+              </div>
+            )
+          }
+
+          <p>
+            I'm interested in exploring quantum many-body systems with machine
+            learning and modern methods of programming. I led and developed many
+            scientific softwares and open-source projects, including <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://yaoquantum.org/"
+            >
+              QuantumBFS/Yao.jl
+            </LinkButton>
+            and many other open source packages in Julia, Python and Rust. I'm honored
+            to be the <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://perimeterinstitute.ca/news/inaugural-wittek-quantum-prize-awarded-perimeter-phd-student"
+              >Wittek Quantum Prize</LinkButton
+            > Winner in 2020. I'm also a founding member of the
+            <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://github.com/JuliaCN"
+            >
+              JuliaCN
+            </LinkButton>, the Julia language localization organization for
+            Chinese.
+          </p>
+        </div>
+      </div>
     </section>
 
     <Hr />
 
+    <section class="mb-10">
+      <div class="md:grid md:grid-cols-5 md:gap-8">
+        <div class="resume col-span-2">
+          <h2 class="resume-section">Rescent</h2>
+          <div class="grid grid-cols-3">
+            <div class="institution">QuEra Computing Inc.</div>
+            <div class="duration">2020 - Present</div>
+            <div class="position">Consultant, Scientific Software</div>
+
+            <div class="institution">Institute of Physics, CAS</div>
+            <div class="duration">2018</div>
+            <div class="position">Research Assistant</div>
+
+            <div class="institution">Fudan University</div>
+            <div class="duration">2017</div>
+            <div class="position">Research Assistant</div>
+          </div>
+          <h2 class="resume-section">Education</h2>
+          <div class="grid grid-cols-3">
+            <div class="institution">
+              University of Waterloo & Perimeter Institute
+            </div>
+            <div class="duration">2019 - 2024</div>
+            <div class="position">Physics, Ph.D</div>
+            <div class="institution">
+              University of Science and Technology of China
+            </div>
+            <div class="duration">2013 - 2017</div>
+            <div class="position">
+              Physics, Bachelor & Computer Science, Minor
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 md:justify-self-end">
+          {
+            featuredPosts.length > 0 && (
+              <>
+                <div id="featured">
+                  <h2>Featured</h2>
+                  <ul>
+                    {featuredPosts.map(({ data, slug }) => (
+                      <Card
+                        href={`/posts/${slug}/`}
+                        frontmatter={data}
+                        secHeading={false}
+                      />
+                    ))}
+                  </ul>
+                </div>
+                {/* {recentPosts.length > 0 && <Hr />} */}
+              </>
+            )
+          }
+        </div>
+      </div>
+    </section>
+
     {
-      featuredPosts.length > 0 && (
+      recentPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>Featured</h2>
+          <Hr />
+          <section id="recent-posts">
+            <h2>Recent Posts</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
+              {recentPosts.map(
+                ({ data, slug }, index) =>
+                  index < 4 && (
+                    <Card
+                      href={`/posts/${slug}/`}
+                      frontmatter={data}
+                      secHeading={false}
+                    />
+                  )
+              )}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
         </>
       )
     }
 
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              ({ data, slug }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )}
-          </ul>
-        </section>
-      )
-    }
-
-    <div class="all-posts-btn-wrapper">
+    <!-- <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +160,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           ></path>
         </svg>
       </LinkButton>
-    </div>
+    </div> -->
   </main>
 
   <Footer />
@@ -148,6 +190,40 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
+  .resume {
+    margin-top: 2em;
+    font-family: Roboto, sans-serif;
+    text-align: left;
+  }
+
+  .resume-section {
+    @apply italic;
+    font-size: 14pt;
+    margin-top: 10pt;
+  }
+
+  .institution {
+    @apply col-span-2;
+    font-size: 12pt;
+    font-weight: 400;
+    margin-top: 4pt;
+    border-bottom: none;
+  }
+
+  .duration {
+    @apply justify-self-end self-center row-span-2;
+    font-size: 10pt;
+  }
+
+  .position {
+    @apply col-span-3;
+    font-size: 9pt;
+    font-weight: 100;
+    margin-top: none;
+    border-top: none;
+    border-bottom: none;
+  }
+
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
@@ -155,7 +231,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #featured h2,
   #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
+    @apply text-xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
