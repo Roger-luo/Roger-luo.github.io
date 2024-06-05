@@ -50,7 +50,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Zhihu",
-    href: "https://www.zhihu.com/people/rogerluo",
+    href: "https://www.zhihu.com/people/luo-xiu-zhe",
     linkTitle: `${SITE.title} on Zhihu`,
     active: true,
   },
