@@ -31,6 +31,12 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
+    name: "Scholar",
+    href: "https://scholar.google.com/citations?user=yJ14pZ0AAAAJ",
+    linkTitle: `${SITE.title} on Google Scholar`,
+    active: true,
+  },
+  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/roger-luo-dev/",
     linkTitle: `${SITE.title} on LinkedIn`,
