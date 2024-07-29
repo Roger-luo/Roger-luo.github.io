@@ -19,6 +19,14 @@ Moshi is a complete rewrite of the [MLStyle](https://github.com/thautwarm/MLStyl
 
 I have been iterating the design and implementation of Moshi in the past 3 year through various packages (mostly [Expronicon](https://github.com/Roger-luo/Expronicon.jl)). The syntax and implementation is gettign stable. However, the package is still in its early stages (mostly on stabilizing the package and covering more patterns on Julia's `Base` types), I would like to announce it here and invite the community to try it out and provide feedback.
 
+## Installation
+
+You can install `Moshi` using the Julia package manager. From the Julia REPL, type `]` to enter the Pkg REPL mode and run:
+
+```julia
+pkg> add Moshi
+```
+
 ## The Name and Acknowledgement
 
 The name "Moshi" is derived from the Chinese word "模式" (móshì) which means "pattern". The design of pattern matching is inspired by its predecessor [MLStyle](https://github.com/thautwarm/MLStyle.jl), which tries to bring pattern matching and algebraic data types from ML family languages to Julia.
@@ -134,5 +142,9 @@ So In summary, we want the following:
 - A formal definition of the pattern matching language so we can at least reason about the correctness in discussions and maybe even automatically.
 
 Moshi is trying to achieve all of these. The package is still in its early stages (v0.3), but I believe the design is getting stable and the implementation is getting mature. I would like to invite the community to try it out and provide feedback.
+
+## Future Work
+
+The next step is to stabilize the package and cover more patterns on Julia's `Base` types. For example, patterns like [range patterns](https://thautwarm.github.io/MLStyle.jl/latest/syntax/pattern.html#range-patterns) and custom pattern syntax is not yet fully supported. However, they shouldn't change the main design of Moshi.
 
 Happy coding!
