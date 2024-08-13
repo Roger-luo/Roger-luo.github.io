@@ -93,7 +93,7 @@ Thus the simplest way of simulating a quantum circuit is very straightforward: w
 using LinearAlgebra
 function naive_broutine!(r::AbstractVector, U::AbstractMatrix, loc::Int)
     n = Int(log2(length(r))) # get the number of qubits
-    return kron(I(1<<(n-loc+1)), U), I(1<<loc)
+    return kron(I(1<<loc), U, I(1<<(n-loc-1))) * r
 end
 ```
 
