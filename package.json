@@ -20,7 +20,7 @@
     "@astrojs/rss": "^4.0.6",
     "@divriots/jampack": "^0.24.4",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^4.9.3",
+    "astro": "^4.16.6",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
