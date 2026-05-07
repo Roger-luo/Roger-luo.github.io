@@ -1,0 +1,9 @@
+[skills]
+ion-cli = { type = "local" }
+frontend-design = { source = "anthropics/skills/frontend-design" }
+astro = { source = "astrolicious/agent-skills/astro" }
+
+[options]
+
+[options.targets]
+claude = ".claude/skills"

@@ -1,0 +1,16 @@
+[[skill]]
+name = "astro"
+source = "https://github.com/astrolicious/agent-skills.git"
+kind = "git"
+path = "astro"
+version = "0.0.1"
+commit = "cb4839f3794189ebf35c55d3ba5d3876dff7acf0"
+checksum = "sha256:ebefe26b231d32379c14e41a46c2de7b4b0184543bedab7febdabe4fb21fba4e"
+
+[[skill]]
+name = "frontend-design"
+source = "https://github.com/anthropics/skills.git"
+kind = "git"
+path = "frontend-design"
+commit = "98669c11ca63e9c81c11501e1437e5c47b556621"
+checksum = "sha256:063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
