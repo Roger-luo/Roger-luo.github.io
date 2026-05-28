@@ -42,21 +42,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           }
 
           <p>
-            I'm interested in exploring quantum many-body systems with machine
-            learning and modern methods of programming. I led and developed many
-            scientific softwares and open-source projects, including <LinkButton
+            I'm Director of Scientific Software at <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://www.quera.com/"
+            >
+              QuEra Computing
+            </LinkButton>, working on compilers, programming languages, and AI
+            for science. I've led many open-source projects across Julia,
+            Python, and Rust — including <LinkButton
               className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
               href="https://yaoquantum.org/"
             >
               QuantumBFS/Yao.jl
-            </LinkButton>
-            and many other open source packages in Julia, Python and Rust. I'm honored
-            to be the <LinkButton
+            </LinkButton> and <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://github.com/QuEraComputing/kirin"
+            >
+              Kirin
+            </LinkButton>. I'm honored to be the <LinkButton
               className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
               href="https://perimeterinstitute.ca/news/inaugural-wittek-quantum-prize-awarded-perimeter-phd-student"
               >Wittek Quantum Prize</LinkButton
-            > Winner in 2020. I'm also a founding member of the
-            <LinkButton
+            > Winner in 2020, and a founding member of <LinkButton
               className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
               href="https://github.com/JuliaCN"
             >
@@ -73,37 +80,61 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section class="mb-10">
       <div class="md:grid md:grid-cols-5 md:gap-8">
         <div class="resume col-span-2">
-          <h2 class="resume-section">Rescent</h2>
-          <div class="grid grid-cols-3">
+          <h2 class="resume-section">Recent</h2>
+
+          <div class="employer">
             <div class="institution">QuEra Computing Inc.</div>
-            <div class="duration">2025</div>
-            <div class="position">Scientific Software Lead</div>
-
-            <div class="institution">QuEra Computing Inc.</div>
-            <div class="duration">2020 - 2024</div>
-            <div class="position">Consultant, Scientific Software</div>
-
-            <div class="institution">Institute of Physics, CAS</div>
-            <div class="duration">2018</div>
-            <div class="position">Research Assistant</div>
-
-            <div class="institution">Fudan University</div>
-            <div class="duration">2017</div>
-            <div class="position">Research Assistant</div>
+            <div class="role">
+              <span class="position">Director of Scientific Software</span>
+              <span class="duration">2026</span>
+            </div>
+            <div class="role">
+              <span class="position">Scientific Software Lead</span>
+              <span class="duration">2025</span>
+            </div>
+            <div class="role">
+              <span class="position">Consultant, Scientific Software</span>
+              <span class="duration">2020 - 2024</span>
+            </div>
           </div>
+
+          <div class="employer">
+            <div class="institution">Institute of Physics, CAS</div>
+            <div class="role">
+              <span class="position">Research Assistant</span>
+              <span class="duration">2018</span>
+            </div>
+          </div>
+
+          <div class="employer">
+            <div class="institution">Fudan University</div>
+            <div class="role">
+              <span class="position">Research Assistant</span>
+              <span class="duration">2017</span>
+            </div>
+          </div>
+
           <h2 class="resume-section">Education</h2>
-          <div class="grid grid-cols-3">
+
+          <div class="employer">
             <div class="institution">
               University of Waterloo & Perimeter Institute
             </div>
-            <div class="duration">2019 - 2024</div>
-            <div class="position">Ph.D in Physics</div>
+            <div class="role">
+              <span class="position">Ph.D in Physics</span>
+              <span class="duration">2019 - 2024</span>
+            </div>
+          </div>
+
+          <div class="employer">
             <div class="institution">
               University of Science and Technology of China
             </div>
-            <div class="duration">2013 - 2017</div>
-            <div class="position">
-              BSc in Physics & Minor in Computer Science
+            <div class="role">
+              <span class="position">
+                BSc in Physics & Minor in Computer Science
+              </span>
+              <span class="duration">2013 - 2017</span>
             </div>
           </div>
         </div>
@@ -115,9 +146,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                 <div id="featured">
                   <h2>Featured</h2>
                   <ul>
-                    {featuredPosts.map(({ data, slug }) => (
+                    {featuredPosts.map(({ data, id }) => (
                       <Card
-                        href={`/posts/${slug}/`}
+                        href={`/posts/${id}/`}
                         frontmatter={data}
                         secHeading={false}
                       />
@@ -140,10 +171,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <h2>Recent Posts</h2>
             <ul>
               {recentPosts.map(
-                ({ data, slug }, index) =>
+                ({ data, id }, index) =>
                   index < 4 && (
                     <Card
-                      href={`/posts/${slug}/`}
+                      href={`/posts/${id}/`}
                       frontmatter={data}
                       secHeading={false}
                     />
@@ -206,26 +237,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     margin-top: 10pt;
   }
 
-  .institution {
-    @apply col-span-2;
-    font-size: 12pt;
-    font-weight: 400;
-    margin-top: 4pt;
-    border-bottom: none;
+  .employer {
+    margin-top: 8pt;
   }
 
-  .duration {
-    @apply row-span-2 self-center justify-self-end;
-    font-size: 10pt;
+  .institution {
+    font-size: 12pt;
+    font-weight: 400;
+  }
+
+  .role {
+    @apply flex items-baseline justify-between gap-3;
+    margin-top: 2pt;
   }
 
   .position {
-    @apply col-span-3;
     font-size: 9pt;
     font-weight: 100;
-    margin-top: none;
-    border-top: none;
-    border-bottom: none;
+  }
+
+  .duration {
+    @apply whitespace-nowrap;
+    font-size: 10pt;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */
