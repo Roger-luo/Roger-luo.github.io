@@ -2,3 +2,13 @@ allowBuilds:
   '@swc/core': true
   esbuild: true
   sharp: true
+
+overrides:
+  esbuild@<0.25.0: ^0.25.0
+  undici@<5.29.0: ^5.29.0
+  undici@>=6.0.0 <6.21.2: ^6.21.2
+  katex@<0.16.21: ^0.16.21
+  cross-spawn@<7.0.5: ^7.0.5
+  micromatch@<4.0.8: ^4.0.8
+  tmp@<0.2.6: ^0.2.6
+  postcss@<8.5.10: ^8.5.10
