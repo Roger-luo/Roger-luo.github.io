@@ -40,7 +40,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Others
 
-* adds blog post for how to add a social icon ([#221](https://github.com/satnaing/astro-paper/issues/221)) 
+* adds blog post for how to add a social icon ([#221](https://github.com/satnaing/astro-paper/issues/221))
 * updates the hook post with a smarter updateHook ([#222](https://github.com/satnaing/astro-paper/issues/222))
 * update breadcrumbs delimiter to "»" ([#213](https://github.com/satnaing/astro-paper/issues/213))
 

@@ -22,7 +22,7 @@ There is no test suite.
 
 ## Commits
 
-**Always use Conventional Commits** (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, etc.). The repo is configured with Commitizen (`cz-conventional-changelog`) and Husky + lint-staged runs Prettier on staged files via `.husky/`. Prefer `pnpm cz` or write the message in Conventional Commits form manually. Recent history (e.g. `chore: add skills`, `fix naive broutine`) follows this convention — match it.
+**Always use Conventional Commits** (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, etc.). The repo is configured with Commitizen (`cz-conventional-changelog`) and `prek` runs Prettier on staged files via `prek.toml` (installs to `.git/hooks/pre-commit` with `prek install`). Prefer `pnpm cz` or write the message in Conventional Commits form manually. Recent history (e.g. `chore: add skills`, `fix naive broutine`) follows this convention — match it.
 
 ## Architecture
 

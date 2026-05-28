@@ -11,6 +11,17 @@ module.exports = {
   },
   overrides: [
     {
+      files: ["*.ts", "*.tsx", "*.d.ts"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+      },
+      rules: {
+        "no-undef": "off",
+      },
+    },
+    {
       files: ["*.astro"],
       parser: "astro-eslint-parser",
       parserOptions: {

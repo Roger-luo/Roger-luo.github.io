@@ -1,5 +1,5 @@
 ---
-import { LOGO_IMAGE, SITE } from "@config";
+import { SITE } from "@config";
 import Hr from "./Hr.astro";
 import RSS from "./RSS.astro";
 import LinkButton from "./LinkButton.astro";
@@ -17,7 +17,7 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
         <div class="font-sans text-lg">罗秀哲</div>
-        <div class="font-mono font-light text-sm">Xiu-Zhe (Roger) Luo</div>
+        <div class="font-mono text-sm font-light">Xiu-Zhe (Roger) Luo</div>
       </a>
       <nav id="nav-menu">
         <button

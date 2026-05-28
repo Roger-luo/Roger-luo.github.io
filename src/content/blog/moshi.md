@@ -14,7 +14,7 @@ tags:
 description: Announcing Moshi, the next-gen MLStyle. Pattern matching and algebraic data types for Julia.
 ---
 
-In this post, I'm excited to announce [Moshi](https://github.com/Roger-luo/Moshi.jl) (模式), a new package for Julia that brings **pattern matching** and **type-stable generic algebraic data types** to the language. It also provides a **derive macro** similar to [Rust’s derive macro](https://doc.rust-lang.org/reference/procedural-macros.html#derive-macros) for deriving traits (*a set of interface functions*) for algebraic data types (ADT) or Julia structs.
+In this post, I'm excited to announce [Moshi](https://github.com/Roger-luo/Moshi.jl) (模式), a new package for Julia that brings **pattern matching** and **type-stable generic algebraic data types** to the language. It also provides a **derive macro** similar to [Rust’s derive macro](https://doc.rust-lang.org/reference/procedural-macros.html#derive-macros) for deriving traits (_a set of interface functions_) for algebraic data types (ADT) or Julia structs.
 Moshi is a complete rewrite of the [MLStyle](https://github.com/thautwarm/MLStyle.jl) package.
 
 I have been iterating the design and implementation of Moshi in the past 3 year through various packages (mostly [Expronicon](https://github.com/Roger-luo/Expronicon.jl)). The syntax and implementation is gettign stable. However, the package is still in its early stages (mostly on stabilizing the package and covering more patterns on Julia's `Base` types), I would like to announce it here and invite the community to try it out and provide feedback.

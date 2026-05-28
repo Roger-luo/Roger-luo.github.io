@@ -1,0 +1,38 @@
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "trailing-whitespace" },
+    { id = "end-of-file-fixer" },
+    { id = "check-merge-conflict" },
+    { id = "check-added-large-files", args = ["--maxkb=1024"] },
+    { id = "check-yaml" },
+    { id = "check-json" },
+    { id = "check-toml" },
+]
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "prettier"
+name = "prettier"
+language = "system"
+entry = "pnpm exec prettier --write"
+files = '\.(js|jsx|ts|tsx|md|mdx|json|astro)$'
+
+[[repos.hooks]]
+id = "eslint"
+name = "eslint"
+language = "system"
+entry = "pnpm exec eslint --fix --max-warnings=0"
+files = '\.(js|jsx|ts|tsx|astro)$'
+exclude = '^(public|dist|node_modules|\.husky|\.vscode|\.yarn)/'
+
+[[repos.hooks]]
+id = "conventional-commit"
+name = "conventional commit message"
+language = "system"
+stages = ["commit-msg"]
+entry = '''sh -c 'head -1 "$1" | grep -qE "^(Merge |Revert |fixup!|squash!|(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.+\))?!?: .+)" || { echo "ERROR: commit message must follow Conventional Commits (e.g. feat: ..., fix: ..., chore: ...)"; exit 1; }' --'''
