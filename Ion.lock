@@ -14,3 +14,9 @@ kind = "git"
 path = "frontend-design"
 commit = "98669c11ca63e9c81c11501e1437e5c47b556621"
 checksum = "sha256:063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+
+[[skill]]
+name = "ion-cli"
+source = ""
+kind = "local"
+checksum = "sha256:bd5d3a00554413b17ddca6c53aa2f639a7a0c5bdfd8d300126ea6a471d5d669c"

@@ -43,3 +43,4 @@ pnpm-debug.log*
 .claude/skills/frontend-design
 .agents/skills/astro
 .claude/skills/astro
+CLAUDE.md
