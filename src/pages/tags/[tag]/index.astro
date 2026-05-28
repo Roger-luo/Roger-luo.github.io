@@ -3,10 +3,11 @@ import { getCollection } from "astro:content";
 import TagPosts from "@layouts/TagPosts.astro";
 import getPostsByTag from "@utils/getPostsByTag";
 import getPagination from "@utils/getPagination";
+import getPostsWithRT from "@utils/getPostsWithRt";
 import getUniqueTags from "@utils/getUniqueTags";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getPostsWithRT(await getCollection("blog"));
 
   const tags = getUniqueTags(posts);
 

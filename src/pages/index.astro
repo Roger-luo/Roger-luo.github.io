@@ -8,10 +8,11 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import getPostsWithRT from "@utils/getPostsWithRt";
 import Profile from "@components/Profile.astro";
 import { SOCIALS } from "@config";
 
-const posts = await getCollection("blog");
+const posts = await getPostsWithRT(await getCollection("blog"));
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);

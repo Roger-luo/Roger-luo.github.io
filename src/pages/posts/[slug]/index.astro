@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 
-const posts = await getCollection("blog");
+const posts = await getPostsWithRT(await getCollection("blog"));
 
 const sortedPosts = getSortedPosts(posts);
 
